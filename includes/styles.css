@@ -1,0 +1,179 @@
+:root {
+    --main-text-color: #363530;
+    --sec-text-color: #8a8985;
+    --main-bg-color: #f7f9ec;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url("fonts/Roboto-Light.ttf");
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url("fonts/Roboto-Medium.ttf");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: DMSerifDisplay;
+    src: url("fonts/DMSerifDisplay-Regular.ttf");
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    color: var(--main-text-color);
+    font-family: Roboto;
+    
+    background-image:
+        url("../imgs/latera-esquerda.png"),
+        url("../imgs/lateral-direita.png")
+    ;
+
+    background-size:
+        1300px,
+        1300px
+    ;
+
+    background-position:
+        calc(50% - 800px) top,
+        calc(50% + 800px) top
+    ;
+
+    background-repeat:
+        no-repeat,
+        no-repeat
+    ;
+    
+    background-color: var(--main-bg-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--main-text-color);
+}
+
+.wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.menu .op {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--sec-text-color);
+    transition: color 500ms;
+}
+
+.menu .op:hover {
+    color: var(--main-text-color);
+}
+
+.banner{
+    display: flex;
+    justify-content: center;
+}
+
+.banner .img{
+    width: 600px;
+}
+
+.content{
+    max-width: 600px;
+    text-align: center;
+}
+
+.content h1,
+.content h2 {
+    font-family: DMSerifDisplay;
+    font-weight: normal;
+}
+
+.content h2{
+    font-size: 20px;
+}
+
+.content .ball{
+    background: var(--main-text-color);
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.content p{
+    line-height: 35px;
+}
+
+h2.has-sep{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+h2.has-sep::after{
+    content: " ";
+    background: var(--main-bg-color);
+    width: 150px;
+    height: 10px;
+    position: absolute;
+    top: 10px;
+    z-index: -1;
+}
+
+h2.has-sep::before{
+    content: " ";
+    background: var(--main-text-color);
+    height: 1px;
+    position: absolute;
+    top: 15px;
+    left: 0;
+    right: 0;
+    z-index: -2;
+}
+
+.books {
+    display: flex;
+    gap: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.bookUn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'DM Serif Display';
+    font-size: 5px;
+   
+}
+
+.bookUn img {
+    transition: transform 0.3s; 
+    width: 110px;
+    height: auto;
+    display: block; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+    border-radius: 5%;
+}
+
+.bookUn img:hover {
+    transform: scale(1.1);
+}
+
+.bookUn p{
+    font-size: 10px;
+}
